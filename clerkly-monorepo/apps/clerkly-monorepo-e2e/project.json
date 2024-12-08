@@ -1,0 +1,9 @@
+{
+  "name": "clerkly-monorepo-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/clerkly-monorepo-e2e/src",
+  "implicitDependencies": ["clerkly-monorepo"],
+  "// targets": "to see all targets run: nx show project clerkly-monorepo-e2e --web",
+  "targets": {}
+}
