@@ -1,1 +1,28 @@
-<p>side-bar works!</p>
+<div
+  class="bg-gray-800 text-white h-full fixed top-0 left-0 z-40 transition-all duration-300"
+  [ngClass]="{
+    'w-64': isExpanded,
+    'w-16': !isExpanded,
+    '-translate-x-full': !isExpanded && isMobile
+  }"
+>
+  <div class="flex items-center justify-between px-4 py-2 bg-blue-700">
+    <button
+      class="text-white"
+      (click)="toggleSidebar()"
+      aria-label="Toggle Sidebar"
+    >
+      <i *ngIf="isExpanded" class="material-icons">close</i>
+      <i *ngIf="!isExpanded" class="material-icons">menu</i>
+    </button>
+  </div>
+  <nav *ngIf="isExpanded" class="mt-4">
+    <ul>
+      <li class="p-4 hover:bg-blue-500 cursor-pointer">New Chat</li>
+      <li class="p-4 hover:bg-blue-500 cursor-pointer">Chat History</li>
+      <li class="p-4 hover:bg-blue-500 cursor-pointer">About</li>
+      <li class="p-4 hover:bg-blue-500 cursor-pointer">Export Chat</li>
+      <li class="p-4 hover:bg-blue-500 cursor-pointer">Sign Up</li>
+    </ul>
+  </nav>
+</div>

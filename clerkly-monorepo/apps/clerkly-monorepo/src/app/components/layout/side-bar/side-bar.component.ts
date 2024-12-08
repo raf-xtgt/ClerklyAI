@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -7,4 +7,23 @@ import { CommonModule } from '@angular/common';
   templateUrl: './side-bar.component.html',
   styleUrl: './side-bar.component.css',
 })
-export class SideBarComponent {}
+export class SideBarComponent {
+  isExpanded = false;
+  isMobile = false;
+
+  @HostListener('window:resize', [])
+  onResize() {
+    this.isMobile = window.innerWidth < 768;
+    if (this.isMobile) {
+      this.isExpanded = false;
+    }
+  }
+
+  constructor() {
+    this.onResize(); // Check initial screen size
+  }
+
+  toggleSidebar() {
+    this.isExpanded = !this.isExpanded;
+  }
+}
