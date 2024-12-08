@@ -6,23 +6,61 @@
     '-translate-x-full': !isExpanded && isMobile
   }"
 >
+  <!-- Sidebar Header with Toggle Button -->
   <div class="flex items-center justify-between px-4 py-2 bg-blue-700">
     <button
       class="text-white"
       (click)="toggleSidebar()"
       aria-label="Toggle Sidebar"
     >
-      <i *ngIf="isExpanded" class="material-icons">close</i>
+      <i *ngIf="isExpanded" class="material-icons">arrow_back</i>
       <i *ngIf="!isExpanded" class="material-icons">menu</i>
     </button>
   </div>
-  <nav *ngIf="isExpanded" class="mt-4">
+
+  <!-- Sidebar Navigation -->
+  <nav class="mt-4">
     <ul>
-      <li class="p-4 hover:bg-blue-500 cursor-pointer">New Chat</li>
-      <li class="p-4 hover:bg-blue-500 cursor-pointer">Chat History</li>
-      <li class="p-4 hover:bg-blue-500 cursor-pointer">About</li>
-      <li class="p-4 hover:bg-blue-500 cursor-pointer">Export Chat</li>
-      <li class="p-4 hover:bg-blue-500 cursor-pointer">Sign Up</li>
+      <!-- New Chat -->
+      <li
+        class="p-4 hover:bg-blue-500 cursor-pointer flex items-center"
+        [ngClass]="{ 'justify-start': isExpanded }"
+      >
+        <i class="material-icons mr-4">chat</i>
+        <span *ngIf="isExpanded">New Chat</span>
+      </li>
+      <!-- Chat History -->
+      <li
+        class="p-4 hover:bg-blue-500 cursor-pointer flex items-center"
+        [ngClass]="{ 'justify-start': isExpanded }"
+      >
+        <i class="material-icons mr-4">history</i>
+        <span *ngIf="isExpanded">Chat History</span>
+      </li>
+      <!-- About -->
+      <li
+        class="p-4 hover:bg-blue-500 cursor-pointer flex items-center"
+        [ngClass]="{ 'justify-start': isExpanded }"
+      >
+        <i class="material-icons mr-4">info</i>
+        <span *ngIf="isExpanded">About</span>
+      </li>
+      <!-- Export Chat -->
+      <li
+        class="p-4 hover:bg-blue-500 cursor-pointer flex items-center"
+        [ngClass]="{ 'justify-start': isExpanded }"
+      >
+        <i class="material-icons mr-4">download</i>
+        <span *ngIf="isExpanded">Export Chat</span>
+      </li>
+      <!-- Sign Up -->
+      <li
+        class="p-4 hover:bg-blue-500 cursor-pointer flex items-center"
+        [ngClass]="{ 'justify-start': isExpanded }"
+      >
+        <i class="material-icons mr-4">person_add</i>
+        <span *ngIf="isExpanded">Sign Up</span>
+      </li>
     </ul>
   </nav>
 </div>
