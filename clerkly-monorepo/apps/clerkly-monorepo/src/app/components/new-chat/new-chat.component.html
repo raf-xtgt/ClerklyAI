@@ -1,0 +1,10 @@
+ <!-- New chat content -->
+ <div class="flex-1 flex flex-col overflow-hidden bg-gray-100">
+    <!-- Chat Area -->
+    <div class="flex-1 overflow-y-auto p-4 space-y-4">
+        <app-chat-bubble *ngFor="let message of messages" [message]="message"></app-chat-bubble>
+    </div>
+
+    <!-- Chat Input Component -->
+    <app-chat-msg-input (sendMessageEvent)="handleSendMessage($event)"></app-chat-msg-input>
+ </div>
