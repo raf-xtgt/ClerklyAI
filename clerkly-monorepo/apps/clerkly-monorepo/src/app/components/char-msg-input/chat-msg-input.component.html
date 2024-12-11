@@ -1,15 +1,14 @@
-<div class="p-4 bg-white shadow-md flex">
-    <input
-      type="text"
-      class="flex-1 border rounded-l px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-      placeholder="Type your message..."
-      [(ngModel)]="newMessage"
-    />
-    <button
-      class="bg-blue-500 text-white px-4 py-2 rounded-r hover:bg-blue-600"
-      (click)="sendMessage()"
-    >
-      Send
-    </button>
-  </div>
-  
+<div class="p-4 flex">
+  <input
+    type="text"
+    class="flex-1 border rounded-l px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    placeholder="Type your message..."
+    [(ngModel)]="newMessage"
+  />
+  <button
+    class="bg-blue-500 text-white px-4 py-2 flex-shrink-0 rounded-r hover:bg-blue-600"
+    (click)="sendMessage()"
+  >
+    Send
+  </button>
+</div>
