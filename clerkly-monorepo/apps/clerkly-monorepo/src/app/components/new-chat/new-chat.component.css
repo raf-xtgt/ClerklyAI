@@ -1,0 +1,11 @@
+:host {
+    height: 100%; /* Ensure the component fills its parent container */
+  }
+  
+  div {
+    &.chat-bubble {
+      max-width: 75%; /* Limit width of chat bubbles */
+      word-wrap: break-word; /* Ensure long text wraps */
+    }
+  }
+  

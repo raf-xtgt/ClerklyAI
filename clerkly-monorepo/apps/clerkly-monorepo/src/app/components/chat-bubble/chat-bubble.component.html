@@ -1,9 +1,9 @@
 <div
   [ngClass]="{
-    'self-end bg-blue-500 text-white': message.isUser,
-    'self-start bg-gray-300 text-black': !message.isUser
+    'ml-auto bg-blue-500 text-white': message.isUser,
+    'mr-auto bg-gray-300 text-black': !message.isUser
   }"
-  class="max-w-xs p-3 rounded-lg shadow"
+  class="p-3 rounded-lg max-w-xs md:max-w-md break-words"
 >
   {{ message.text }}
 </div>

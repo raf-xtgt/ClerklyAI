@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { ChatBubbleComponent } from '../chat-bubble/chat-bubble.component';
 import { ChatMsgInputComponent } from '../char-msg-input/chat-msg-input.component';
+import { NgFor, CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-new-chat',
-  imports: [ChatBubbleComponent, ChatMsgInputComponent],
+  imports: [CommonModule, NgFor, ChatBubbleComponent, ChatMsgInputComponent],
   templateUrl: './new-chat.component.html',
   styleUrl: './new-chat.component.css',
 })
